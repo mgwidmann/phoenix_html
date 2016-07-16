@@ -201,8 +201,10 @@ defmodule Phoenix.HTML.Form do
 
   ## Options
 
-    * `:as` - the name to be used in the form. May be inflected
-      if a model is available
+    * `:as` - the server side parameter in which all params for this 
+      form will be collected (i.e. `as: :user_params` would mean all fields
+      for this form will be accessed as `conn.params.user_params` server 
+      side). May be inflected if a model is available.
 
     * `:method` - the HTTP method. If the method is not "get" nor "post",
       an input tag with name `_method` is generated along-side the form tag.
